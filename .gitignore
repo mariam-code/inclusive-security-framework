@@ -1,0 +1,21 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+NTUSER.DAT
+ntuser.*
+OneDrive/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+venv/
+.venv/
+
+# Ignore logs and databases
+*.log
+*.sqlite
+
+# Ignore ZIP files
+*.zip
