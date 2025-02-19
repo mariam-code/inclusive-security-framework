@@ -1,4 +1,5 @@
 from flask import Blueprint, request, jsonify
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from models import db, User
 import requests
 
@@ -59,23 +60,31 @@ def update_user(user_id):
 
     return jsonify({"message": "User updated successfully"}), 200
 
-@user_bp.route('/login', methods=['POST'])
+from flask_jwt_extended import create_access_token
+
+@user_bp.route('/login', methods=['POST']) 
 def login():
     """Authenticate user and log login attempts."""
     data = request.get_json()
     user = User.query.filter_by(username=data['username']).first()
 
     if user and user.check_password(data['password']):
-        # Successful login
+        # Generate JWT token
+        access_token = create_access_token(identity=user.username)  
+
+        # Successful login log
         log_data = {
             "event_type": "Successful Login",
             "description": f"User {user.username} logged in successfully."
         }
         requests.post("http://127.0.0.1:5002/logs", json=log_data)
 
-        return jsonify({"message": "Login successful"}), 200
+        return jsonify({
+            "message": "Login successful",
+            "access_token": access_token  # Return the JWT token
+        }), 200
     else:
-        # Failed login attempt
+        # Failed login attempt log
         log_data = {
             "event_type": "Failed Login",
             "description": f"Failed login attempt for username: {data['username']}."
@@ -83,3 +92,10 @@ def login():
         requests.post("http://127.0.0.1:5002/logs", json=log_data)
 
         return jsonify({"message": "Invalid username or password"}), 401
+
+    
+@user_bp.route('/protected', methods=['GET'])
+@jwt_required()
+def protected():
+    current_user = get_jwt_identity()
+    return jsonify({"message": f"Hello, {current_user}. This is a protected route!"})
