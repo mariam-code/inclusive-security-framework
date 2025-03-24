@@ -1,0 +1,225 @@
+# Translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-03-04 16:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: routes.py:22
+msgid "Access denied. Insufficient permissions."
+msgstr "Zugriff verweigert. Unzureichende Berechtigungen."
+
+#: routes.py:38
+msgid "Username already exists"
+msgstr "Benutzername existiert bereits."
+
+#: routes.py:40
+msgid "Email already registered"
+msgstr "E-Mail ist bereits registriert."
+
+#: routes.py:53
+msgid "User Registration"
+msgstr "Benutzerregistrierung"
+
+#: routes.py:54
+#, python-brace-format
+msgid "Admin registered {username} with role {role}."
+msgstr "Administrator hat {username} mit der Rolle {role} registriert."
+
+#: routes.py:58
+msgid "User registered successfully"
+msgstr "Benutzer erfolgreich registriert."
+
+#: routes.py:73
+msgid "Successful Login"
+msgstr "Erfolgreiche Anmeldung"
+
+#: routes.py:74
+#, python-brace-format
+msgid "User {username} logged in successfully with role {role}."
+msgstr "Benutzer {username} hat sich erfolgreich mit der Rolle {role} angemeldet."
+
+#: routes.py:79
+msgid "Login successful"
+msgstr "Anmeldung erfolgreich"
+
+#: routes.py:86
+msgid "Failed Login"
+msgstr "Fehlgeschlagene Anmeldung"
+
+#: routes.py:87
+#, python-brace-format
+msgid "Failed login attempt for username: {username}."
+msgstr "Fehlgeschlagener Anmeldeversuch für Benutzername: {username}."
+
+#: routes.py:91
+msgid "Invalid username or password"
+msgstr "Ungültiger Benutzername oder Passwort"
+
+#: routes.py:104 routes.py:127
+msgid "User not found"
+msgstr "Benutzer nicht gefunden"
+
+#: routes.py:108 routes.py:131
+msgid "Access denied"
+msgstr "Zugriff verweigert"
+
+#: routes.py:147
+msgid "Profile Update"
+msgstr "Profilaktualisierung"
+
+#: routes.py:148
+#, python-brace-format
+msgid "User {username} updated profile: {fields}"
+msgstr "Benutzer {username} hat das Profil aktualisiert: {fields}"
+
+#: routes.py:152
+msgid "User updated successfully"
+msgstr "Benutzer erfolgreich aktualisiert"
+
+#: routes.py:160
+msgid "Welcome, Admin! You have access to this route."
+msgstr "Willkommen, Admin! Sie haben Zugriff auf diese Route."
+
+#: routes.py:172
+#, python-brace-format
+msgid "Hello, {user}. Your role is {role}."
+msgstr "Hallo, {user}. Ihre Rolle ist {role}."
+
+#: click/core.py:1124
+msgid "Aborted!"
+msgstr "Abgebrochen!"
+
+#: click/core.py:1349 click/core.py:1379
+#, python-brace-format
+msgid "(Deprecated) {text}"
+msgstr "(Veraltet) {text}"
+
+#: click/core.py:1396
+msgid "Options"
+msgstr "Optionen"
+
+#: click/core.py:1422
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] "Unerwartetes zusätzliches Argument erhalten ({args})"
+msgstr[1] "Unerwartete zusätzliche Argumente erhalten ({args})"
+
+#: click/core.py:1438
+#, python-brace-format
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr "Veraltungswarnung: Der Befehl {name!r} ist veraltet."
+
+#: click/core.py:1645
+msgid "Commands"
+msgstr "Befehle"
+
+#: click/core.py:1677
+msgid "Missing command."
+msgstr "Fehlender Befehl."
+
+#: click/core.py:1755
+#, python-brace-format
+msgid "No such command {name!r}."
+msgstr "Kein solcher Befehl {name!r}."
+
+#: click/core.py:2313
+msgid "Value must be an iterable."
+msgstr "Der Wert muss eine Iteration sein."
+
+#: click/core.py:2783
+#, python-brace-format
+msgid "env var: {var}"
+msgstr "Umgebungsvariable: {var}"
+
+#: click/core.py:2813
+msgid "(dynamic)"
+msgstr "(dynamisch)"
+
+#: click/core.py:2828
+#, python-brace-format
+msgid "default: {default}"
+msgstr "Standard: {default}"
+
+#: click/core.py:2841
+msgid "required"
+msgstr "erforderlich"
+
+#: click/types.py:267
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+"Wählen Sie aus:\n"
+"\t{choices}"
+
+#: click/types.py:393
+#, python-brace-format
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] "{value!r} stimmt nicht mit dem Format {format} überein."
+msgstr[1] "{value!r} stimmt nicht mit den Formaten {formats} überein."
+
+#: click/types.py:415
+#, python-brace-format
+msgid "{value!r} is not a valid {number_type}."
+msgstr "{value!r} ist keine gültige {number_type}."
+
+#: click/types.py:826
+msgid "file"
+msgstr "Datei"
+
+#: click/types.py:828
+msgid "directory"
+msgstr "Verzeichnis"
+
+#: click/types.py:830
+msgid "path"
+msgstr "Pfad"
+
+#: click/types.py:881
+#, python-brace-format
+msgid "{name} {filename!r} does not exist."
+msgstr "{name} {filename!r} existiert nicht."
+
+#: click/types.py:890
+#, python-brace-format
+msgid "{name} {filename!r} is a file."
+msgstr "{name} {filename!r} ist eine Datei."
+
+#: click/types.py:898
+#, python-brace-format
+msgid "{name} {filename!r} is a directory."
+msgstr "{name} {filename!r} ist ein Verzeichnis."
+
+#: click/types.py:907
+#, python-brace-format
+msgid "{name} {filename!r} is not readable."
+msgstr "{name} {filename!r} ist nicht lesbar."
+
+#: click/types.py:916
+#, python-brace-format
+msgid "{name} {filename!r} is not writable."
+msgstr "{name} {filename!r} ist nicht beschreibbar."
+
+#: click/types.py:992
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] "{len_type} Werte sind erforderlich, aber {len_value} wurde angegeben."
+msgstr[1] "{len_type} Werte sind erforderlich, aber {len_value} wurden angegeben."
+

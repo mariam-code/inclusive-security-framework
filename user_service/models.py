@@ -10,6 +10,7 @@ class User(db.Model):
     email = db.Column(db.String(100), unique=True, nullable=False)
     password_hash = db.Column(db.String(200), nullable=False)
     role = db.Column(db.String(20), nullable=False, default='user')  # Default role is 'user'
+    otp = db.Column(db.String(6))  # ✅ Added for MFA
 
     def set_password(self, password):
         """Hash password before saving."""

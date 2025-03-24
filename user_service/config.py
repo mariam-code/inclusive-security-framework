@@ -10,3 +10,6 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     JWT_SECRET_KEY = "your_jwt_secret_key"  # Added for JWT authentication
 
+  # Localisation settings
+    LANGUAGES = ["en", "es", "fr", "de"]  # English, Spanish, French, German
+    DEFAULT_LANGUAGE = "en"
